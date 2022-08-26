@@ -35,11 +35,13 @@
                         <td>0.799999</td>
                         <td>1</td>
                         <td>
-                            <a data-toggle="modal" class="btn btn-warning btn-sm"><i class="fa fa-edit text-white"></i></a>
-                            <a class="btn btn-success btn-sm" href="<?= base_url('Package/detail') ?>"><i class="fa fa-eye text-white"></i></a>
-                            <?php if ($this->session->userdata('id_user_level') == '1') : ?>
-                                <a data-toggle="modal" class="btn btn-danger btn-sm"><i class="fa fa-trash text-white"></i></a>
-                            <?php endif; ?>
+                            <div class="btn-group" role="button">
+                                <a class="btn btn-primary btn-sm" href="<?= base_url('Package/detail') ?>"><i class="fa fa-eye text-white"></i></a>
+                                <a data-toggle="modal" class="btn btn-warning btn-sm"><i class="fa fa-edit text-white"></i></a>
+                                <?php if ($this->session->userdata('id_user_level') == '1') : ?>
+                                    <a data-toggle="modal" class="btn btn-danger btn-sm"><i class="fa fa-trash text-white"></i></a>
+                                <?php endif; ?>
+                            </div>
                         </td>
                     </tr>
 
