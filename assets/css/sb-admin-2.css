@@ -11222,3 +11222,24 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+.btn-navigation {
+  margin-right: 10px;
+  width: 30%;
+  font-size: 1rem;
+  background-color: white;
+  color: #3a3b45;
+  /* border: 1px solid #3a3b45; */
+  font-weight: bold;
+}
+
+.btn-navigation {
+  transition-duration: 0.4s;
+}
+
+.btn-navigation:hover {
+  background-color: #FFE601;
+  color: #fff;
+  border: none;
+}
+
+
