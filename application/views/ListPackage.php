@@ -52,9 +52,9 @@
         }
 
         nav ul li {
-            color: #fff;
+            color: #3a3b45;
             list-style-type: none;
-            background-color: #4e73df;
+            background-color: #fff;
             border: 1px solid #3a3b45;
             margin-bottom: 2px;
             border-radius: 5px;
