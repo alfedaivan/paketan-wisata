@@ -85,19 +85,9 @@
                     <div class="text-justify card-body p-0">
                         <nav>
                             <ul class="scroll-wrap">
-                                <li>Private Trip Deluxe Boat (Saling Komodo)</li>
-                                <li>Private Trip Deluxe Boat (Saling Komodo)</li>
-                                <li>Private Trip Deluxe Boat (Saling Komodo)</li>
-                                <li>Private Trip Deluxe Boat (Saling Komodo)</li>
-                                <li>Private Trip Deluxe Boat (Saling Komodo)</li>
-                                <li>Private Trip Sumba</li>
-                                <li>Private Trip Sumba</li>
-                                <li>Private Trip Sailing Komodo</li>
-                                <li>Private Trip Sailing Komodo</li>
-                                <li>Overland Flores</li>
-                                <li>Open Trip Sumba</li>
-                                <li>Open Trip Sumba</li>
-                                <li>Open Trip Sumba</li>
+                                <?php foreach($list as $keys => $value) : ?>
+                                <li><?= $value->nama ?>(<?= $value->deskripsi ?>)</li>
+                                <?php endforeach; ?>
                             </ul>
                         </nav>
                     </div>

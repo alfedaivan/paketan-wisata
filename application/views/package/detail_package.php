@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-7">
             <div class="card-header" style="background: #FFE601; color: black;">
-                <h6 class="m-0 font-weight-bold text-center">Paket wisata 999</h6>
+                <h6 class="m-0 font-weight-bold text-center"><?= $detail->nama ?></h6>
             </div>
         </div>
     </div>
@@ -29,27 +29,12 @@
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <tbody>
+                    <?php foreach($sub_detail as $key => $value) : ?>
                     <tr>
-                        <th class="bg-info text-white" width="43%">Transportasi</th>
-                        <td>Toyota Avanza</td>
+                        <th class="bg-info text-white" width="43%"><?= $value->keterangan ?></th>
+                        <td><?= $value->deskripsi ?></td>
                     </tr>
-                    <tr>
-                        <th class="bg-info text-white">Range Biaya</th>
-                        <td>1.700.000 - 2.000.000</td>
-                    </tr>
-
-                    <tr>
-                        <th class="bg-info text-white">Lama Menginap</th>
-                        <td>3 - 4 Hari</td>
-                    </tr>
-                    <tr>
-                        <th class="bg-info text-white">Jumlah Destinasi</th>
-                        <td>8 Destinasi</td>
-                    </tr>
-                    <tr>
-                        <th class="bg-info text-white">Tempat Menginap</th>
-                        <td>Hotel Haris</td>
-                    </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -66,23 +51,26 @@
         </div>
         <div class="col-md-7">
             <div class="card-header" style="background: #FFE601; color: black;">
-                <h6 class="m-0 font-weight-bold text-center">Paket wisata 999</h6>
+                <h6 class="m-0 font-weight-bold text-center"><?= $detail->nama ?></h6>
             </div>
         </div>
     </div>
 
 
     <div class="card-body">
-        <div class="form-group">
-            <label class="font-weight-bold">Deskripsi</label>
-            <textarea autocomplete="off" type="text-area" name="detail" class="form-control" rows="5" <?php if ($this->session->userdata('id_user_level') == '2') : ?> disabled<?php endif; ?>></textarea>
-        </div>
+        <form method="POST" action="<?= base_url('Package/simpan_deskripsi') ?>" >
+            <div class="form-group">
+                <label class="font-weight-bold">Deskripsi</label>
+                <input type="hidden" name="id_package" value="<?= $detail->id_package ?>">
+                <textarea autocomplete="off" type="text-area" name="detail_deskripsi" class="form-control" rows="5" <?php if ($this->session->userdata('id_user_level') == '2') : ?> disabled<?php endif; ?>><?= $detail->deskripsi ?></textarea>
+            </div>
 
-        <div class="text-right">
-            <?php if ($this->session->userdata('id_user_level') == '1') : ?>
-                <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-            <?php endif; ?>
-        </div>
+            <div class="text-right">
+                <?php if ($this->session->userdata('id_user_level') == '1') : ?>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+                <?php endif; ?>
+            </div>
+        </form>
     </div>
 
 </div>

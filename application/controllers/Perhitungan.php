@@ -10,6 +10,7 @@
             $this->load->library('pagination');
             $this->load->library('form_validation');
             $this->load->model('Perhitungan_model');
+            $this->load->model('Package_model');
         }
 
         public function index()

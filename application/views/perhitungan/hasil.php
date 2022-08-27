@@ -19,7 +19,8 @@
 					<tr align="center">
 						<th>Alternatif</th>
 						<th>Nilai</th>
-						<th width="15%">Ranking</th>
+						<th>Ranking</th>
+						<th width="15%">Aksi</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -36,6 +37,16 @@
 						</td>
 						<td><?= $keys->nilai ?></td>
 						<td><?= $no; ?></td>
+
+						<?php
+							$cek_button = $this->Package_model->cek_exist($keys->id_alternatif)->num_rows();
+						?>
+
+						<?php if($cek_button > 0) { ?> 
+							<td></td>
+						<?php } else { ?>
+							<td><a href="<?= base_url('Package/simpan/'.$keys->id_alternatif) ?>" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Simpan</a></td>
+						<?php } ?>
 					</tr>
 					<?php
 						$no++;

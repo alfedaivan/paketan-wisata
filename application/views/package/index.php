@@ -27,19 +27,19 @@
                 <tbody>
                     <?php
                     $no = 1;
-                    // foreach ($alternatif as $keys) : 
+                    foreach ($list as $keys => $value) : 
                     ?>
                     <tr align="center">
                         <td><?= $no ?></td>
-                        <td align="left">Paket Wisata 999</td>
-                        <td>0.799999</td>
-                        <td>1</td>
+                        <td align="left"><?= $value->nama ?></td>
+                        <td><?= $value->nilai ?></td>
+                        <td><?= $no ?></td>
                         <td>
                             <div class="btn-group" role="button">
-                                <a class="btn btn-primary btn-sm" href="<?= base_url('Package/detail') ?>"><i class="fa fa-eye text-white"></i></a>
+                                <a class="btn btn-primary btn-sm" href="<?= base_url('Package/detail/'.$value->id_package.'/'.$value->id_alternatif) ?>"><i class="fa fa-eye text-white"></i></a>
                                 <a data-toggle="modal" class="btn btn-warning btn-sm"><i class="fa fa-edit text-white"></i></a>
                                 <?php if ($this->session->userdata('id_user_level') == '1') : ?>
-                                    <a data-toggle="modal" class="btn btn-danger btn-sm"><i class="fa fa-trash text-white"></i></a>
+                                    <a class="btn btn-danger btn-sm" href="<?= base_url('Package/delete_package/'.$value->id_package) ?>" onclick="return confirm ('Apakah anda yakin untuk meghapus data ini')"><i class="fa fa-trash text-white"></i></a>
                                 <?php endif; ?>
                             </div>
                         </td>
@@ -48,7 +48,7 @@
 
                     <?php
                     $no++;
-                    // endforeach 
+                    endforeach 
                     ?>
                 </tbody>
             </table>

@@ -10,6 +10,7 @@
             $this->load->library('pagination');
             $this->load->library('form_validation');
             $this->load->model('Alternatif_model');
+            $this->load->model('Package_model');
 
             if ($this->session->userdata('id_user_level') != "1") {
             ?>
@@ -87,6 +88,7 @@
         public function destroy($id_alternatif)
         {
             $this->Alternatif_model->delete($id_alternatif);
+            $this->Package_model->delete_alternatif($id_alternatif);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data berhasil dihapus!</div>');
             redirect('alternatif');
         }
