@@ -40,10 +40,10 @@
 
        <!-- Sidebar - Brand -->
        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('Login/home'); ?>">
-         <div class="sidebar-brand-icon rotate-n-15">
-           <i class="fas fa-database"></i>
+         <div class="sidebar-brand-icon">
+           <img src="<?= base_url('assets/') ?>img/logo.png" alt="" style="height: 50px;">
          </div>
-         <div class="sidebar-brand-text mx-3">SPK AHP TOPSIS</div>
+         <div class="sidebar-brand-text mx-3">Pembentukan Paket Wisata</div>
        </a>
 
        <!-- Divider -->

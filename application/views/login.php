@@ -46,7 +46,8 @@
 <body class="bg-gradient-info">
     <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-lg pb-3 pt-3 font-weight-bold">
         <div class="container">
-            <a class="navbar-brand text-info" style="font-weight: 900;" href="<?= base_url('') ?>"> <i class="fa fa-database mr-2 rotate-n-15"></i> Sistem Pendukung Keputusan Metode AHP TOPSIS</a>
+            <a class="navbar-brand text-info" style="font-weight: 900;" href="<?= base_url('') ?>">
+                <img src="<?= base_url('assets/') ?>img/logo.png" alt="" style="height: 50px;"> Pembentukan Paket Wisata</a>
         </div>
     </nav>
 
@@ -58,20 +59,7 @@
             </div>
         </div>
         <!-- Outer Row -->
-        <div class="row d-plex justify-content-between">
-            <div class="col-xl-6 col-lg-6 col-md-6 mt-5">
-                <div class="card bg-none o-hidden border-0 my-5 text-white" style="background: none;">
-                    <div class="text-justify card-body p-0">
-                        <h4 style="font-weight: 800;">Sistem Pendukung Keputusan Metode AHP TOPSIS</h4>
-                        <p class="pt-4">
-                            Analytical Hierarchy Process (AHP) adalah suatu metode pengambilan keputusan dengan melakukan perbandingan berpasangan antara kriteria pilihan dan juga perbandingan berpasangan antara pilihan yang ada. Pengambilan keputusan dengan AHP dikomposisikan menjadi kriteria, dan alternative pilihan.
-                        </p>
-                        <p>
-                            Metode Technique for Order Preference by Similarity to Ideal Solution (TOPSIS) adalah salah satu metode dari model keputusan Multi Attribute Decision Making (MADM). Metode TOPSIS menggunakan konsep dimana alternatif terpilih yang terbaik tidak hanya memiliki jarak terpendek dari solusi ideal positif, tetapi juga memiliki jarak terpanjang dari solusi ideal negatif.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="row d-plex justify-content-center">
             <div class="col-xl-5 col-lg-5 col-md-5 mt-5">
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
