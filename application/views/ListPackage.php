@@ -54,7 +54,7 @@
         nav ul li {
             color: #3a3b45;
             list-style-type: none;
-            background-color: #fff;
+            background-color: #f6c23e;
             border: 1px solid #3a3b45;
             margin-bottom: 2px;
             border-radius: 5px;
@@ -82,7 +82,7 @@
         <div class="row d-plex justify-content-between">
             <div class="col-xl-12 col-lg-12 col-md-12 mt-5">
                 <div class="card bg-none o-hidden border-0 my-5 text-white" style="background: none;">
-                    <div class="text-justify card-body p-0">
+                    <div class="text-justify card-body" style="background-color: #fff;">
                         <nav>
                             <ul class="scroll-wrap">
                                 <li>Private Trip Deluxe Boat (Saling Komodo)</li>
