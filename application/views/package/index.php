@@ -37,8 +37,10 @@
                         <td>
                             <div class="btn-group" role="button">
                                 <a class="btn btn-primary btn-sm" href="<?= base_url('Package/detail/'.$value->id_package.'/'.$value->id_alternatif) ?>"><i class="fa fa-eye text-white"></i></a>
-                                <a data-toggle="modal" class="btn btn-warning btn-sm"><i class="fa fa-edit text-white"></i></a>
                                 <?php if ($this->session->userdata('id_user_level') == '1') : ?>
+                                    <a data-toggle="modal" class="btn btn-warning btn-sm"><i class="fa fa-edit text-white"></i></a>
+                                <?php endif; ?>
+                                <?php if ($this->session->userdata('id_user_level') == '2') : ?>
                                     <a class="btn btn-danger btn-sm" href="<?= base_url('Package/delete_package/'.$value->id_package) ?>" onclick="return confirm ('Apakah anda yakin untuk meghapus data ini')"><i class="fa fa-trash text-white"></i></a>
                                 <?php endif; ?>
                             </div>

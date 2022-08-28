@@ -11,7 +11,7 @@
             $this->load->library('form_validation');
             $this->load->model('User_model');
 
-            if ($this->session->userdata('id_user_level') != "1") {
+            if ($this->session->userdata('id_user_level') != "2") {
             ?>
 				<script type="text/javascript">
                     alert('Anda tidak berhak mengakses halaman ini!');

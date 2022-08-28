@@ -5,7 +5,9 @@
 
 	<div>
 		<a href="<?= base_url('Kriteria/prioritas'); ?>" class="btn btn-primary"> <i class="fa fa-sync"></i> Bobot Preferensi AHP </a>
-		<a href="<?= base_url('Kriteria/create'); ?>" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah Data </a>
+		<?php if ($this->session->userdata('id_user_level') == '1') : ?>
+			<a href="<?= base_url('Kriteria/create'); ?>" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah Data </a>
+		<?php endif; ?>
 	</div>
 </div>
 
@@ -56,9 +58,11 @@
 							<td><?php echo $value->jenis ?></td>
 							<td>
 								<div class="btn-group" role="group">
-									<a data-toggle="tooltip" data-placement="bottom" title="Edit Data" href="<?= base_url('Kriteria/edit/' . $value->id_kriteria) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+									<?php if ($this->session->userdata('id_user_level') == '1') : ?>
+										<a data-toggle="tooltip" data-placement="bottom" title="Edit Data" href="<?= base_url('Kriteria/edit/' . $value->id_kriteria) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+									<?php endif; ?>
 									<div class="text-right">
-										<?php if ($this->session->userdata('id_user_level') == '1') : ?>
+										<?php if ($this->session->userdata('id_user_level') == '2') : ?>
 											<a data-toggle="tooltip" data-placement="bottom" title="Hapus Data" href="<?= base_url('Kriteria/destroy/' . $value->id_kriteria) ?>" onclick="return confirm ('Apakah anda yakin untuk meghapus data ini')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 										<?php endif; ?>
 									</div>

@@ -45,7 +45,9 @@
 						<?php if($cek_button > 0) { ?> 
 							<td></td>
 						<?php } else { ?>
-							<td><a href="<?= base_url('Package/simpan/'.$keys->id_alternatif) ?>" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Simpan</a></td>
+							<?php if ($this->session->userdata('id_user_level') == '1') : ?>
+								<td><a href="<?= base_url('Package/simpan/'.$keys->id_alternatif) ?>" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Simpan</a></td>
+							<?php endif; ?>
 						<?php } ?>
 					</tr>
 					<?php

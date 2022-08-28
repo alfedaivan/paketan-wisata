@@ -10,7 +10,7 @@
         <!-- Content Row -->
         <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            Selamat datang <span class="text-uppercase"><b><?= $this->session->username; ?>!</b></span> Anda bisa mengoperasikan sistem dengan wewenang tertentu melalui pilihan menu di bawah.
+            Selamat datang <span class="text-uppercase"><b><?= $this->session->role; ?>!</b></span> Anda bisa mengoperasikan sistem dengan wewenang tertentu melalui pilihan menu di bawah.
         </div>
         <div class="row">
 
@@ -131,7 +131,7 @@
         <!-- Content Row -->
         <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            Selamat datang <span class="text-uppercase"><b><?= $this->session->username; ?>!</b></span> Anda bisa mengoperasikan sistem dengan wewenang tertentu melalui pilihan menu di bawah.
+            Selamat datang <span class="text-uppercase"><b><?= $this->session->role; ?>!</b></span> Anda bisa mengoperasikan sistem dengan wewenang tertentu melalui pilihan menu di bawah.
         </div>
         <div class="row">
 
@@ -144,6 +144,21 @@
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-home fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="<?= base_url('Kriteria'); ?>" class="text-secondary text-decoration-none">Data Kriteria</a></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-cube fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -166,6 +181,21 @@
             </div>
 
             <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="<?= base_url('User'); ?>" class="text-secondary text-decoration-none">Data User</a></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-users-cog fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 mb-4">
                 <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -179,6 +209,22 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-danger shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="<?= base_url('Package'); ?>" class="text-secondary text-decoration-none">Data Package</a></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-layer-group fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 <?php endif; ?>

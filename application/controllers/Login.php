@@ -27,11 +27,14 @@ class Login extends CI_Controller {
         $passwordx = md5($password);
         $set = $this->Login_model->login($username, $passwordx);
         if($set)
-        { 
+        {
+            $role = $this->Login_model->get_role($set->id_user);
+
             $log = [
                 'id_user' => $set->id_user,
                 'username' => $set->username,
                 'id_user_level' => $set->id_user_level,
+                'role'  => $role->user_level,
                 'status' => 'Logged'
             ];
             $this->session->set_userdata($log);            

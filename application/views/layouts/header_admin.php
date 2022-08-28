@@ -125,6 +125,14 @@
        <?php endif; ?>
 
        <?php if ($this->session->userdata('id_user_level') == '2') : ?>
+        <li class="nav-item <?php if ($page == 'Kriteria') {
+                                echo 'active';
+                              } ?>">
+           <a class="nav-link" href="<?= base_url('Kriteria'); ?>">
+             <i class="fas fa-fw fa-cube"></i>
+             <span>Data Kriteria</span></a>
+         </li>
+
          <li class="nav-item <?php if ($page == 'Hasil') {
                                 echo 'active';
                               } ?>">
@@ -152,7 +160,7 @@
          Master User
        </div>
 
-       <?php if ($this->session->userdata('id_user_level') == '1') : ?>
+       <?php if ($this->session->userdata('id_user_level') == '2') : ?>
          <li class="nav-item <?php if ($page == 'User') {
                                 echo 'active';
                               } ?>">

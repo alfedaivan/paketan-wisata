@@ -17,5 +17,14 @@
             $this->db->where('password', $passwordx);
             return $this->db->get()->row();
         }
+
+        public function get_role($id_user) {
+            $this->db->select('b.user_level');
+            $this->db->from('user a');
+            $this->db->join('user_level b', 'a.id_user_level=b.id_user_level');
+            $this->db->where('a.id_user', $id_user);
+
+            return $this->db->get()->row();
+        }
     
     }
